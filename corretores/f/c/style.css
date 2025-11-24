@@ -1,0 +1,78 @@
+.range {
+	position: relative;
+	float:left;
+	margin-right:10px;
+}
+
+.range-slider {
+  height: 5px;
+  position: relative;
+  background-color: #FFF;
+  border-radius: 2px;
+}
+
+.range-selected {
+  height: 100%;
+  left: 0%;
+  right: 0%;
+  position: absolute;
+  background-color: #FFF;
+}
+
+.range-input {
+  position: relative;
+}
+.range-input input {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -1px;
+  z-index:1;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.range-input input::-webkit-slider-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 3px solid #ebbb3d;
+  background-color: #fff;
+  pointer-events: auto;
+  -webkit-appearance: none;
+}
+.range-input input::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 3px solid #024b3c;
+  background-color: #fff;
+  pointer-events: auto;
+  -moz-appearance: none;
+}
+
+.range-price {
+    margin: 0px 0px 8px 0px;
+    width: 100%;
+    display: flex;
+    color:#FFF;
+    font-weight:500;
+    justify-content: center;
+    align-items: center;
+  }
+  .range-price label {
+    margin-right: 5px;
+  }
+  .range-price input {
+    width: 90px;
+    padding: 0px 5px;
+    background:transparent;
+    border:none;
+    color:#FFF;
+    font-weight:500;
+    outline:none;
+  }
+  .range-price input:first-of-type {
+    margin-right: 15px;
+  }
