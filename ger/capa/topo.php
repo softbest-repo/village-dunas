@@ -266,7 +266,7 @@ if ($resultNovosImoveis === false) {
 			</script>
 			<div id="topo">
 				<div id="topo-esq" style="width:460px;">
-					<p class="slogan"><a style="display:table; padding-top:4px;" title="<?php echo $nomeEmpresa;?>" href="<?php echo $configUrl;?>"><img style="padding-left:14px;" src="<?php echo $configUrlGer;?>f/i/comp.png" height="55"/></a></p>
+					<p class="slogan"><a style="display:table; padding-top:4px;" title="<?php echo $nomeEmpresa;?>" href="<?php echo $configUrl;?>"><img style="padding-left:14px;" src="<?php echo $configUrlGer;?>f/i/comp.png" style=" padding-left: 12px;" height="55"/></a></p>
 					<div id="menu" style="width:760px; margin-top:0px;">
 <?php
 	if(validaAcesso($conn, "banners") == "ok" || validaAcesso($conn, "quemSomos") == "ok" || validaAcesso($conn, "servicos") == "ok" || validaAcesso($conn, "relatorios") == "ok" || validaAcesso($conn, "informacoes") == "ok"){
