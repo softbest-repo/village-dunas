@@ -1,0 +1,24 @@
+RewriteEngine On
+
+ErrorDocument 404 https://markanimoveis.com.br/ger/
+
+
+RewriteRule ger\/$ ger/index.php
+RewriteRule ger(.+)\/$ ger/index.php
+RewriteRule ger(.+)/(.+)\/$ ger/index.php
+RewriteRule ger(.+)/(.+)/(.+)\/$ ger/index.php
+RewriteRule ger(.+)/(.+)/(.+)/(.+)\/$ ger/index.php
+RewriteRule ger(.+)/(.+)/(.+)/(.+)/(.+)\/$ ger/index.php
+RewriteRule ger(.+)/(.+)/(.+)/(.+)/(.+)/(.+)\/$ ger/index.php
+RewriteRule ger(.+)/(.+)/(.+)/(.+)/(.+)/(.+)/(.+)\/$ ger/index.php
+
+RewriteRule \/$ index.php
+RewriteRule (.+)\/$ index.php
+RewriteRule (.+)/(.+)\/$ index.php
+RewriteRule (.+)/(.+)/(.+)\/$ index.php
+RewriteRule (.+)/(.+)/(.+)/(.+)\/$ index.php
+RewriteRule (.+)/(.+)/(.+)/(.+)/(.+)\/$ index.php
+RewriteRule (.+)/(.+)/(.+)/(.+)/(.+)/(.+)\/$ index.php
+RewriteRule (.+)/(.+)/(.+)/(.+)/(.+)/(.+)/(.+)\/$ index.php
+
+
