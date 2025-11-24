@@ -35,23 +35,7 @@
 					$descricao = str_replace("../../../../", $configUrlGer, $_POST['descricao']);
 					$descricao = str_replace("../../../../", $configUrlGer, $descricao);
 					$descricao = str_replace("../../../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../../../", $configUrlGer, $descricao);
+
 
 					$sql = "UPDATE quemSomos SET nomeQuemSomos = '".$_POST['nome']."', descricaoCQuemSomos = '".$_POST['descricaoC']."', descricaoQuemSomos = '".str_replace("'", "&#39;", $descricao)."', urlQuemSomos = '".$urlQuemSomos."' WHERE codQuemSomos = '".$url[6]."'";
 					$result = $conn->query($sql); 
@@ -110,8 +94,8 @@
 <?php
 				if($url[6] == 1){				
 ?>
-							<p class="bloco-campo"><label>Descrição Capa:<span class="obrigatorio"> </span></label>
-							<textarea class="campo" id="descricaoC" name="descricaoC" <?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> type="text" style="width:1042px; height:200px;" ><?php echo $_SESSION['descricaoC']; ?></textarea></p>
+							<p class="bloco-campo"  style="width:1055px;" ><label>Descrição Capa:<span class="obrigatorio"> </span></label>
+							<textarea class="campo textarea" id="descricaoC" name="descricaoC" <?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> type="text" style="width:400px; height:600px;"><?php echo $_SESSION['descricaoC']; ?></textarea></p>
 <?php
 				}
 				
@@ -122,6 +106,7 @@
 <?php
 				}
 ?>
+
 							<p class="bloco-campo"><div class="botao-expansivel"><p class="esquerda-botao"></p><input class="botao" id="alterar" <?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> type="submit" name="alterar" title="Alterar" value="Alterar" /><p class="direita-botao"></p></div></p>						
 							<br class="clear"/>
 						</form>

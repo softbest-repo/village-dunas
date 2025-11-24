@@ -57,7 +57,7 @@
 					include ('f/conf/criaUrl.php');
 					$urlBanner = criaUrl($_POST['nome']);
 																	
-					$sql = "UPDATE banners SET nomeBanner = '".preparaNome($_POST['nome'])."', tituloBanner = '".$_POST['titulo']."', descricaoBanner = '".$_POST['descricao']."', textoBanner = '".$_POST['texto']."', linkBanner = '".str_replace("\"", "&quot;", str_replace("'", "&#39;", $_POST['link']))."', novaAbaBanner = '".$_POST['novaAba']."', urlBanner = '".$urlBanner."' WHERE codBanner = '".$url[6]."'";
+				 	$sql = "UPDATE banners SET nomeBanner = '".preparaNome($_POST['nome'])."', tituloBanner = '".$_POST['titulo']."', descricaoBanner = '".$_POST['descricao']."', botaoBanner = '".$_POST['botaoBanner']."', localTextoBanner = '".$_POST['localTextoBanner']."', linkBanner = '".str_replace("\"", "&quot;", str_replace("'", "&#39;", $_POST['link']))."', novaAbaBanner = '".$_POST['novaAba']."', urlBanner = '".$urlBanner."' WHERE codBanner = '".$url[6]."'";
 					$result = $conn->query($sql); 
 					
 					if($result == 1){
@@ -74,7 +74,8 @@
 					$_SESSION['nome'] = $dadosBanner['nomeBanner'];
 					$_SESSION['titulo'] = $dadosBanner['tituloBanner'];
 					$_SESSION['descricao'] = $dadosBanner['descricaoBanner'];
-					$_SESSION['texto'] = $dadosBanner['textoBanner'];
+				 	$_SESSION['botaoBanner'] = $dadosBanner['botaoBanner'];
+					$_SESSION['localTextoBanner'] = $dadosBanner['localTextoBanner'];
 					$_SESSION['link'] = $dadosBanner['linkBanner'];
 					$_SESSION['novaAba'] = $dadosBanner['novaAbaBanner'];
 				}
@@ -103,28 +104,93 @@
 								document.getElementById("link").disabled = false;
 								document.getElementById("novaAba1").disabled = false;
 								document.getElementById("novaAba2").disabled = false;
+								document.getElementById("botaoBanner1").disabled = false;
+								document.getElementById("botaoBanner2").disabled = false;
+								document.getElementById("localTextoBanner1").disabled = false;
+								document.getElementById("localTextoBanner2").disabled = false;
+								document.getElementById("localTextoBanner3").disabled = false;
 								document.getElementById("alterar").disabled = false;
 							}
 						</script> 
-						<form action="<?php echo $configUrlGer; ?>site/banners/alterar/<?php echo $url[6] ;?>/" method="post">
-							<p class="bloco-campo"><label>Nome: <span class="obrigatorio"> * </span></label>
-							<input id="nome" <?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> required class="campo" type="text" name="nome" style="width:400px;" value="<?php echo $_SESSION['nome']; ?>" /></p>
+						<form action="<?php echo $configUrlGer; ?>site/banners/alterar/<?php echo $url[6]; ?>/" method="post">
+							<div style="display: flex; gap:25px;">
+								<p class="bloco-campo">
+								<label>Nome: <span class="obrigatorio"> * </span></label>
+								<input id="nome" name="nome" class="campo" type="text" required style="width:400px;" value="<?php echo $_SESSION['nome']; ?>"  <?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> />
+							</p>
 
-							<p class="bloco-campo"><label>Título: <span class="em" style="font-weight:normal;"> Ex: Balneário Gaivota...</span></label>
-							<input class="campo" type="text" id="titulo" name="titulo" <?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> style="width:400px;" value="<?php echo $_SESSION['titulo']; ?>" /></p>
-						
-							<p class="bloco-campo"><label>Link: <span class="em" style="font-weight:normal;"> Ex: http://www.softbest.com.br </span></label>
-							<input id="link" <?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> class="campo" type="text" name="link" style="width:400px;" value="<?php echo $_SESSION['link']; ?>" /></p>
+							<p class="bloco-campo">
+								<label>Título: <span class="em" style="font-weight:normal;">Ex: Balneário Gaivota...</span></label>
+								<input id="titulo" name="titulo" class="campo" type="text" style="width:400px;"  value="<?php echo $_SESSION['titulo']; ?>"  <?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> />
+							</p>
+							</div>
 
-							<p class="bloco-campo"><label>Abrir link em nova aba:</label>
-							<label style="float:left; font-weight:normal; margin-right:20px;"><input class="campo" type="radio" id="novaAba1" name="novaAba" value="N" <?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> <?php echo $_SESSION['novaAba'] == "N" || $_SESSION['novaAba'] == "" ? 'checked' : '';?>/>Não</label>
-							<label style="float:left; font-weight:normal;"><input class="campo" type="radio" id="novaAba2" name="novaAba" value="S" <?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> <?php echo $_SESSION['novaAba'] == "S" ? 'checked' : '';?>/>Sim</label></p>							 
-							
+							<p class="bloco-campo" style="width:855px;">
+								<label>Descrição:<span class="obrigatorio"> </span></label>
+								<textarea class="campo textarea" id="descricao" name="descricao" style="width:400px; height:200px;"><?php echo $_SESSION['descricao']; ?></textarea>
+							</p>
+
+							<p class="bloco-campo">
+								<label>Local Texto:</label>
+								<label style="float:left; font-weight:normal; margin-right:20px;">
+									<input class="campo" id="localTextoBanner1" type="radio" name="localTextoBanner" value="E" <?php echo $_SESSION['localTextoBanner'] == "E" ? 'checked' : '';?><?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> /> Esquerda
+								</label>
+								<label style="float:left; font-weight:normal; margin-right:20px;">
+									<input class="campo" id="localTextoBanner2" type="radio" name="localTextoBanner" value="D" <?php echo $_SESSION['localTextoBanner'] == "D" ? 'checked' : '';?> <?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> /> Direita
+								</label>
+								<label style="float:left; font-weight:normal;">
+									<input class="campo" id="localTextoBanner3" type="radio" name="localTextoBanner" value="C"<?php echo $_SESSION['localTextoBanner'] == "C" ? 'checked' : '';?> <?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> /> Centro
+								</label>
+							</p>
+
 							<br class="clear"/>
 
-							<p class="bloco-campo"><div class="botao-expansivel"><p class="esquerda-botao"></p><input class="botao" id="alterar" <?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> type="submit" name="alterar" title="Alterar" value="Alterar" /><p class="direita-botao"></p></div></p>						
+							<p class="bloco-campo">
+								<label>Mostrar Botão?</label>
+								<label style="float:left; font-weight:normal; margin-right:20px;">
+									<input class="campo" id="botaoBanner1" type="radio" name="botaoBanner" value="F" 
+										<?php echo $_SESSION['botaoBanner'] == 'F' ? 'checked' : '';?>
+										<?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> /> Não
+								</label>
+								<label style="float:left; font-weight:normal;">
+									<input class="campo" id="botaoBanner2" type="radio" name="botaoBanner" value="T" 
+										<?php echo $_SESSION['botaoBanner'] == 'T' ? 'checked' : '';?>
+										<?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> /> Sim
+								</label>
+							</p>
+							<br class="clear"/>
+							<p class="bloco-campo">
+								<label>Abrir link em nova aba:</label>
+								<label style="float:left; font-weight:normal; margin-right:20px;">
+									<input class="campo" id="novaAba1" type="radio" name="novaAba" value="N"
+										<?php echo $_SESSION['novaAba'] == "N" || $_SESSION['novaAba'] == "" ? 'checked' : '';?> 
+										<?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> /> Não
+								</label>
+								<label style="float:left; font-weight:normal;">
+									<input class="campo" id="novaAba2" type="radio" name="novaAba" value="S"
+										<?php echo $_SESSION['novaAba'] == "S" ? 'checked' : '';?> 
+										<?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> /> Sim
+								</label>
+							</p>
+							<br class="clear"/>
+							<p class="bloco-campo">
+								<label>Link: <span class="em" style="font-weight:normal;">Ex: http://www.softbest.com.br</span></label>
+								<input id="link" name="link" class="campo" type="text" style="width:400px;"
+									value="<?php echo $_SESSION['link']; ?>" 
+									<?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> />
+							</p>
+							<br class="clear"/>
+							<p class="bloco-campo">
+								<div class="botao-expansivel">
+									<p class="esquerda-botao"></p>
+									<input class="botao" id="alterar" type="submit" name="alterar" title="Alterar" value="Alterar"
+										<?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> />
+									<p class="direita-botao"></p>
+								</div>
+							</p>
 							<br class="clear"/>
 						</form>
+
 					</div>
 				</div>
 <?php

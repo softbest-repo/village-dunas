@@ -74,7 +74,7 @@
 					
 					$novoOrdem = $dadosUltimoBanner['codOrdenacaoBanner'] + 1;	
 
-					$sql = "INSERT INTO banners VALUES(0, ".$novoOrdem.", '".preparaNome($_POST['nome'])."', '".$_POST['titulo']."', '".$_POST['descricao']."', '".$_POST['texto']."', '".str_replace("\"", "&quot;", str_replace("'", "&#39;", $_POST['link']))."', '".$_POST['novaAba']."', 'T', '".$urlBanner."')";
+				 	$sql = "INSERT INTO banners VALUES(0, ".$novoOrdem.", '".preparaNome($_POST['nome'])."', '".$_POST['titulo']."', '".$_POST['descricao']."',  '".$_POST['botaoBanner']."',  '".$_POST['local']."', '".str_replace("\"", "&quot;", str_replace("'", "&#39;", $_POST['link']))."', '".$_POST['novaAba']."', 'T', '".$urlBanner."')";
 					$result = $conn->query($sql);
 					
 					if($result == 1){
@@ -91,9 +91,7 @@
 				
 				}else{
 					$_SESSION['nome'] = "";
-					$_SESSION['texto'] = "";
 					$_SESSION['descricao'] = "";
-					$_SESSION['texto'] = "";
 					$_SESSION['link'] = "";
 					$_SESSION['novaAba'] = "";
 				}
@@ -115,14 +113,46 @@
 						<p class="obrigatorio">Campos obrigatórios *</p>
 						<br/>
 						<form action="<?php echo $configUrlGer; ?>site/banners/" method="post">
-							<p class="bloco-campo"><label>Nome: <span class="obrigatorio"> * </span></label>
-							<input class="campo" type="text" name="nome" style="width:400px;" required value="<?php echo $_SESSION['nome']; ?>" /></p>
+						
 							
-							<p class="bloco-campo"><label>Título: <span class="em" style="font-weight:normal;"> Ex: Balneário Gaivota...</span></label>
-							<input class="campo" type="text" name="titulo" style="width:400px;" value="<?php echo $_SESSION['titulo']; ?>" /></p>
+							<div style="display: flex; gap: 25px;">
+								<p class="bloco-campo"><label>Nome: <span class="obrigatorio"> * </span></label>
+									<input class="campo" type="text" name="nome" style="width:400px;" required value="<?php echo $_SESSION['nome']; ?>" />
+								</p>
+								<p class="bloco-campo">
+									<label>Título: <span class="em" style="font-weight:normal;"> Ex: Balneário Gaivota...</span></label>
+									<input class="campo" type="text" name="titulo" style="width:400px;" value="<?php echo $_SESSION['titulo']; ?>" />
+								</p>
+							</div>
+							<p class="bloco-campo" style="width:855px; ">
+								<label>Descrição:<span class="obrigatorio"> </span></label>
+								<textarea class="campo textarea" id="descricao" name="descricao" type="text" style="width:400px; height:200px;" value="<?php echo $_SESSION['descricao']; ?>"></textarea>
+							</p>
 							
 							<p class="bloco-campo"><label>Link: <span class="em" style="font-weight:normal;"> Ex: http://www.softbest.com.br</span></label>
 							<input class="campo" type="text" name="link" style="width:400px;" value="<?php echo $_SESSION['link']; ?>" /></p>
+
+							<p class="bloco-campo"><label>Local Texto:</label>
+								<label style="float:left; font-weight:normal; margin-right:20px;">
+									<input class="campo" type="radio" name="local" value="E" checked /> Esquerda
+								</label>
+								<label style="float:left; font-weight:normal; margin-right:20px;">
+									<input class="campo" type="radio" name="local" value="D"  /> Direita
+								</label>
+								<label style="float:left; font-weight:normal;">
+									<input class="campo" type="radio" name="local" value="C"  /> Centro
+								</label>
+							</p>
+							<br class="clear"/>
+							<p class="bloco-campo"><label>Mostrar Botão?</label>
+								<label style="float:left; font-weight:normal; margin-right:20px;">
+									<input class="campo" type="radio" name="botaoBanner" value="F" checked /> Não
+								</label>
+								<label style="float:left; font-weight:normal; margin-right:20px;">
+									<input class="campo" type="radio" name="botaoBanner" value="T"  /> Sim
+								</label>
+							</p>
+							<br class="clear"/>
 
 							<p class="bloco-campo"><label>Abrir link em nova aba:</label>
 							<label style="float:left; font-weight:normal; margin-right:20px;"><input class="campo" type="radio" name="novaAba" value="N" <?php echo $_SESSION['novaAba'] == "N" || $_SESSION['novaAba'] == "" ? 'checked' : '';?>/> Não</label>

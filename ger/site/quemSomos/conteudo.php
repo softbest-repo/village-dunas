@@ -19,13 +19,91 @@
 					<div id="localizacao-filtro">
 						<p class="nome-lista">Site</p>
 						<p class="flexa"></p>
-						<p class="nome-lista">A Imobiliária</p>
+						<p class="nome-lista">Quem Somos</p>
 						<br class="clear" />
 					</div>
-					<div class="demoTarget">
+										<div class="demoTarget">
 						<div id="formulario-filtro">
+							<script>
+								function abreCadastrar(){
+									var $rf = jQuery.noConflict();
+									if(document.getElementById("cadastrar").style.display=="none"){
+										document.getElementById("botaoFechar").style.display="block";
+										$rf("#cadastrar").slideDown(250);
+									}else{
+										document.getElementById("botaoFechar").style.display="none";
+										$rf("#cadastrar").slideUp(250);
+									}
+								}
+							</script>
+							<form name="filtro" action="<?php echo $configUrl;?>site/quemSomos/" method="post" />
+								<div class="botao-novo" style="margin-left:0px;"><a title="Nova Área de Atuação" onClick="abreCadastrar()"><div class="esquerda-novo"></div><div class="conteudo-novo">Adicionar desempenhos </div><div class="direita-novo"></div></a></div>
+								<div class="botao-novo" style="display:none; margin-left:0px;" id="botaoFechar"><a title="Fechar Cadastrar" onClick="abreCadastrar();"><div class="esquerda-novo"></div><div class="conteudo-novo" id="conteudo-novo-cliente">X</div><div class="direita-novo"></div></a></div>
+								<br class="clear" />
+							</form>
 						</div>
 					</div>				
+					<div id="cadastrar" style="display:none; margin-left:30px; margin-top:30px; margin-bottom:30px;">
+<?php
+				if(isset($_POST['cadastrar'])){
+					
+					include ('f/conf/criaUrl.php');
+					$urlServico = criaUrl($_POST['nome']);
+
+					$sqlUltimoServico = "SELECT codOrdenacaoServico FROM quemSomos ORDER BY codOrdenacaoServico DESC LIMIT 0,1";
+					$resultUltimoServico = $conn->query($sqlUltimoServico);
+					$dadosUltimoServico = $resultUltimoServico->fetch_assoc();
+					
+					$novoOrdem = $dadosUltimoServico['codOrdenacaoServico'] + 1;	
+
+					$descricao = str_replace("../../", $configUrlGer, $_POST['descricao']);
+					$descricao = str_replace("../../", $configUrlGer, $descricao);
+
+					
+					$sql = "INSERT INTO quemSomos VALUES(0, ".$novoOrdem.", '".preparaNome($_POST['nome'])."', '".str_replace("'", "&#39;", $descricao)."', 'T', '".$urlServico."')";
+					$result = $conn->query($sql);
+					
+					if($result == 1){
+						if(isset($_POST['cadastrar'])){
+							$_SESSION['nome'] = $_POST['nome'];
+							$_SESSION['cadastro'] = "ok";
+							echo "<meta HTTP-EQUIV='Refresh' CONTENT='0;URL=".$configUrlGer."site/quemSomos/'>";
+						}else{
+							$erroData = "<p class='erro'>Área de Atuação <strong>".$_POST['nome']."</strong> cadastrada com sucesso!</p>";
+						}
+					}else{
+						$erroData = "<p class='erro'>Problemas ao cadastrar área de atuação!</p>";
+					}
+				
+				}
+
+				if($erroData != "" || $erro == "sim" || $erro == "ok"){
+?>
+						<div class="area-erro">
+<?php
+					echo $erroData;
+					if($erro == "sim" || $erro == "ok"){
+						include('f/conf/mostraErro.php');
+					}
+?>
+						</div>
+<?php
+				}
+?>				
+					
+						<p class="obrigatorio">Campos obrigatórios *</p>
+						<br/>
+						<form action="<?php echo $configUrlGer; ?>site/quemSomos/" method="post">
+							<p class="bloco-campo"><label>Nome: <span class="obrigatorio"> * </span></label>
+							<input class="campo" type="text" name="nome" style="width:842px;" required value="" /></p>
+
+							<p class="bloco-campo" style="width:855px;"><label>Descrição:<span class="obrigatorio"> </span></label>
+							<textarea class="campo textarea" id="descricao" name="descricao" type="text" style="width:400px; height:200px;" ></textarea></p>
+
+							<p class="bloco-campo"><div class="botao-expansivel"><p class="esquerda-botao"></p><input class="botao" type="submit" name="cadastrar" title="Salvar Servico" value="Salvar" /><p class="direita-botao"></p></div></p>						
+							<br class="clear"/>
+						</form>
+					</div>			
 				</div>
 				<div id="dados-conteudo">
 					<div id="consultas">

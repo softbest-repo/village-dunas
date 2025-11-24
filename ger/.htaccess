@@ -1,6 +1,6 @@
 RewriteEngine On
 
-ErrorDocument 404 https://markanimoveis.com.br/ger/
+ErrorDocument 404 http://localhost/village-dunas/ger/
 
 
 RewriteRule ger\/$ ger/index.php

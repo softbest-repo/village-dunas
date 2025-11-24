@@ -75,24 +75,7 @@
 
 					$descricao = str_replace("../../", $configUrlGer, $_POST['descricao']);
 					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
+
 					
 					$sql = "INSERT INTO servicos VALUES(0, ".$novoOrdem.", '".preparaNome($_POST['nome'])."', '".str_replace("'", "&#39;", $descricao)."', 'T', '".$urlServico."')";
 					$result = $conn->query($sql);

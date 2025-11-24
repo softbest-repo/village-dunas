@@ -3,15 +3,15 @@
 	error_reporting(0);
 	ini_set('display_errors', 0);
 
-	$configServer = "50.116.87.98";
-	$configLogin = "servidor_village-dunas";
-	$configSenha = "epitafio2025*";
-	$configBaseDados = "servidor_village-dunas";
+	// $configServer = "50.116.87.98";
+	// $configLogin = "servidor_village-dunas";
+	// $configSenha = "epitafio2025*";
+	// $configBaseDados = "servidor_village-dunas";
 
-	// $configServer = "localhost";
-	// $configLogin = "root";
-	// $configSenha = "";
-	// $configBaseDados = "village-dunas";	
+	$configServer = "localhost";
+	$configLogin = "root";
+	$configSenha = "";
+	$configBaseDados = "village-dunas";	
 
 
 	$configUrl = "http://".$_SERVER['HTTP_HOST']."/village-dunas/ger/";
@@ -31,7 +31,7 @@
 	$cookie = "village-dunasGer";
 	$configLimite = 20;
 	
-	$urlUpload = "/ger";
+	$urlUpload = "village-dunas/ger";
 
 	$nomeEmpresa = "Ger | Imobiliária Village Dunas [GER]";
 	$nomeEmpresaMenor = "Imobiliária Village Dunas";
