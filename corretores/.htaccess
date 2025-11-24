@@ -1,0 +1,24 @@
+RewriteEngine On
+
+RewriteRule ^Sitemap\.xml$ geraSitemap.php [L]
+
+ErrorDocument 404 http://192.168.1.200/sanFerreira/404/
+
+
+RewriteRule ger\/$ ger/index.php
+RewriteRule ger(.+)\/$ ger/index.php
+RewriteRule ger(.+)/(.+)\/$ ger/index.php
+RewriteRule ger(.+)/(.+)/(.+)\/$ ger/index.php
+RewriteRule ger(.+)/(.+)/(.+)/(.+)\/$ ger/index.php
+RewriteRule ger(.+)/(.+)/(.+)/(.+)/(.+)\/$ ger/index.php
+RewriteRule ger(.+)/(.+)/(.+)/(.+)/(.+)/(.+)\/$ ger/index.php
+RewriteRule ger(.+)/(.+)/(.+)/(.+)/(.+)/(.+)/(.+)\/$ ger/index.php
+
+RewriteRule \/$ index.php
+RewriteRule (.+)\/$ index.php
+RewriteRule (.+)/(.+)\/$ index.php
+RewriteRule (.+)/(.+)/(.+)\/$ index.php
+RewriteRule (.+)/(.+)/(.+)/(.+)\/$ index.php
+RewriteRule (.+)/(.+)/(.+)/(.+)/(.+)\/$ index.php
+RewriteRule (.+)/(.+)/(.+)/(.+)/(.+)/(.+)\/$ index.php
+RewriteRule (.+)/(.+)/(.+)/(.+)/(.+)/(.+)/(.+)\/$ index.php

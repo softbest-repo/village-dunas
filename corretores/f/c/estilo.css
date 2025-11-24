@@ -1,0 +1,491 @@
+* {margin:0; list-style:none; padding:0; color:#282828; font-size:15px;}
+
+img {border:none;}
+a {text-decoration:none;}
+:hover {-webkit-transition: all .2s; -moz-transition: all .2s; -ms-transition: all .2s; -o-transition: all .2s; transition: all .2s;}
+
+.clear {clear:both;}
+.oculto {display:none;}
+.disabled {display:none;}
+option {color:#282829;}
+.lb-caption {color:#FFF;}
+
+input[type=button] {-webkit-appearance:none;}
+input[type=submit] {-webkit-appearance:none;}
+input[type=file] {-webkit-appearance:none;}
+select {-webkit-appearance:none;}
+
+body {width:100%; height:100%; overflow-x:hidden;}
+
+#tudo {width:100%;}
+
+#tudo .fundo { width: 100%; height: 100vh; position: fixed; z-index: 1; background: transparent url('../i/quebrado/img-paralax.jpg') center center no-repeat; background-size: cover; background-attachment: fixed;}
+#tudo .fundo-2 { width: 100%; height: 100%; position: fixed; z-index: 2; background: #002c23c5; }
+#tudo #topo {width:100%; position:relative; z-index:3;}
+#tudo #topo #barra-proposta { padding:2%; padding-top:1%; padding-bottom:0px; display: flex; justify-content: space-between; gap: 10px;}
+#tudo #topo #barra-proposta .barra-propostas {width:44%; padding:10px 0px; float:left; text-align:center; font-size:17px; background-color:#13791bc4; border-radius:10px;}
+#tudo #topo #barra-proposta .barra-whatsapp {width:20%;  display: flex;  float:left;}
+#tudo #topo #barra-proposta .barra-whatsapp a {width: 100%; display:block; align-content: center;  padding:10px 0px; text-align:center; color:#FFF; font-size:17px; background:rgba(5,163,8,1); border-radius:10px;}
+#tudo #topo #barra-proposta .barra-whatsapp a strong {color:#FFF; font-size:17px;}
+#tudo #topo #barra-proposta .informativos {width:34%; display: flex;  float:right;}
+#tudo #topo #barra-proposta .informativos a {width: 100%; padding:10px 0px; display:block; text-align:center; align-content: center; font-size:17px; color:#FFF; font-weight:700; background-color:#FF0000; border-radius:10px;}
+
+#tudo #topo #repete-topo { width: 100%; height: 170px;}
+#tudo #topo #repete-topo #conteudo-topo { width: 100%; height: 1065px; border-radius: 10%;display: flex ; justify-content: center; align-items: end; position: absolute; top: -970px;  background-color: rgba(255, 255, 255, 0.651);  box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 17px 2px;}
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo {position: absolute; left: 8%; top: -5px; }
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros {}
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #filtros .titulo { font-weight: 600; font-size:17px; color: #002c23eb; }
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #filtros #linha { width: 20%; border-bottom: 2px solid #002c2369; margin-bottom: 5px;  }
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #filtros {float:left; }
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #filtros .bloco-campo-float {float:left; position:relative;}
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #filtros .bloco-campo-float:before {content:"";  display:inline-block; cursor:pointer; z-index:30; vertical-align:middle; position:absolute; z-index: 500; margin-top:13px; right:10px; width:14px; height:14px; background:transparent url('../i/quebrado/seta-filtro.svg') center center no-repeat; background-size:14px; transition:.2s linear;}
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #filtros .bloco-campo-float select {width:200px; height:38px; cursor:pointer; outline:none; padding:5px 10px; color:#858585; background:white; position:relative; z-index:31; border:1px solid #ccc; border-radius:10px;}
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #filtros .botao-filtrar {display:table; float:left;}
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #filtros .botao-filtrar input {display:block; height: 38px; border:none; color:#FFF; cursor:pointer; padding:5px 10px; padding-left:40px; background:#002c23eb url('../i/quebrado/busca.svg') 17px center no-repeat; background-size:17px; border-radius:10px; transition: all .3s;}
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #filtros .botao-filtrar input:hover {background:#002c239f url('../i/quebrado/busca.svg') 17px center no-repeat; background-size:17px; border-radius:10px; transition: all .3s;}
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #login {float:right;}
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #login #bloco-login {float:right; margin-top:2px; padding:10px 20px; border:1px solid #002c23eb; border-radius:10px;}
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #login #bloco-login .imagem {float:right;}
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #login #bloco-login .login {float:left; padding-top:15px; margin-right:15px; color:#002c23eb;}
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #logado {float:right;}
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #logado #bloco-logado {min-width:370px; float:right; margin-top:2px; padding:12px 20px; background-color:#002c23eb; border-radius:10px;}
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #logado #bloco-logado a {float:right;}
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #logado #bloco-logado a .imagem {background-color:#FFF; padding:5px; border-radius:100%;}
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #logado #bloco-logado .logado {display:flex; text-align:right; font-size:16px; padding-left:6px; padding-top:2px; color:#FFF;}
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #logado #bloco-logado .logado strong {font-size:16px; font-weight:600; padding-left:10px; color:#FFF;}
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #logado #bloco-logado .sair {float:right; text-align:right; padding-top:5px; margin-right:18px; font-size:13px; text-decoration:underline; color:#FFF;}
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #logado #bloco-logado .sair a {font-size:13px; text-decoration:underline; color:#FFF;}
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #logado #bloco-logado .menu {float:right; text-align:right; padding-top:5px; font-size:13px; margin-right:20px; text-decoration:underline; color:#FFF;}
+#tudo #topo #repete-topo #conteudo-topo #filtro-topo #conteudo-filtros #logado #bloco-logado .menu a {font-size:13px; text-decoration:underline; color:#FFF;}
+
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo{display: flex; width: 100%; justify-content: center; position: relative;}
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #repete-logo { border-radius: 40px 10px 40px 10px ; padding: 13px 53px; background-color: #002c23; position: relative; top: 40px; box-shadow: rgba(100, 100, 111, 0.486) 0px 0px 17px 2px;} 
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #repete-logo #conteudo-logo {}
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #login {position: absolute; right: 130px; top: 5px; box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 17px 2px}
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #login #bloco-login { display: flex; align-items: center; padding: 5px 10px; border: 2px solid #002c23eb; border-radius: 10px;  background-color: rgba(255, 255, 255, 0.651); transition: all .3s; }
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #login #bloco-login:hover { padding:5px 10px; border:2px solid #002c23eb; background-color: rgba(255, 255, 255, 0.815); border-radius:10px; transition: all .3s;}
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #login #bloco-login .imagem {}
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #login #bloco-login .login { margin-right:8px; color:#002c23; font-size:13px;}
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #logado {position: absolute; right: 130px; top: 7px; box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 17px 2px}
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #logado #bloco-logado {padding:8px 15px; background-color:#002c23; border-radius:10px; display: flex;  gap: 10px}
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #logado #bloco-logado a { display: flex; justify-content: center; font-size:13px; text-decoration:underline; color:#FFF;}
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #logado #bloco-logado a .imagem { height: 35px; width: 35px; background-color:#FFF; padding:3px; border-radius:100%;}
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #logado #bloco-logado .logado {display:flex; text-align:right; font-size:16px;  color:#FFF;}
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #logado #bloco-logado .logado strong {font-size:16px; font-weight:600; padding-left:10px; color:#f9bf90b2;}
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #logado #bloco-logado .sair { text-align:right;  margin-right:18px; font-size:13px; text-decoration:underline; color:#FFF;}
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #logado #bloco-logado .sair a {font-size:13px; text-decoration:underline; color:#FFF;}
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #logado #bloco-logado .menu-usuario { text-align:right;  font-size:13px; text-decoration:underline; color:#FFF;}
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #logado #bloco-logado .menu-usuario a {font-size:13px; text-decoration:underline; color:#FFF;}
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #menu { position: absolute; right: 480px; top: 22px; cursor: pointer; }
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #menu #titulo-menu {font-size:17px; font-weight: bold; color: #002c23; padding-right: 30px; background: url('../i/quebrado/menu.svg') right center no-repeat; background-size: 20px; }
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #menu #mostra-menu { opacity: 0; visibility: hidden; transform: translateY(10px);  transition: all .3s ease;flex-direction: column;  gap: 8px; background: #fff; padding: 10px 20px;  border-radius: 6px; position: absolute; top: 30px; right: -26px; display: flex; box-shadow: rgba(0,0,0,0.1) 0px 4px 10px; }
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #menu.aberto #mostra-menu { opacity: 1; visibility: visible; transform: translateY(0); } 
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #menu #mostra-menu a{ font-size:16px; font-weight: 600; transition: all .3s; }
+#tudo #topo #repete-topo #conteudo-topo #bloco-topo #menu #mostra-menu a:hover{ font-size:16px; font-weight: 600; color: #002c23; text-decoration: underline; transition: all .3s; }
+@media (max-width: 1520px) {
+    #tudo #topo #repete-topo #conteudo-topo #bloco-topo #repete-logo #conteudo-logo #logo-topo .logo img { content: url('../i/quebrado/logo.png'); width: 100px; }
+    #tudo #topo #repete-topo #conteudo-topo #bloco-topo #repete-logo { border-radius: 100%; padding: 5px; background-color: #002c23; position: relative; top: 60px;box-shadow: rgba(100, 100, 111, 0.486) 0px 0px 17px 2px;}
+    #tudo #topo #repete-topo #conteudo-topo #filtro-topo { position: absolute; left: 8%; top: 26px; }
+    #tudo #topo #repete-topo #conteudo-topo #bloco-topo #logado { position: absolute; right: 130px; top: 38px; box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 17px 2px;}
+    #tudo #topo #repete-topo #conteudo-topo #bloco-topo #menu { position: absolute; right: 480px; top: 53px;}
+    #tudo #topo #repete-topo #conteudo-topo #bloco-topo #login {position: absolute; right: 130px; top: 36px; box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 17px 2px}
+}
+#tudo #conteudo {width:100%; position:relative; z-index:4;}
+#tudo #conteudo #repete-banner {margin:0px 2%; padding:20px;margin-top:20px; background-color: rgba(255, 255, 255, 0.651); border-radius:15px;}
+#tudo #conteudo #repete-banner #conteudo-banner {width:100%;}
+#tudo #conteudo #repete-banner #conteudo-banner #bloco-banner {width:100%;}
+#tudo #conteudo {width:100%; position:relative; z-index:4;}
+#tudo #conteudo #repete-conteudo {margin:0px 2%; display: flex; padding:20px; min-height:675px; margin-top:20px; background-color: rgba(255, 255, 255, 0.651); border-radius:15px; }
+#tudo #conteudo #repete-conteudo #repete-filtro{width: 400px;}
+#tudo #conteudo #repete-conteudo #mostra-loteamentos {width: 100%;}
+#tudo #conteudo #repete-conteudo #mostra-loteamentos .titulo {font-weight:600; padding-bottom:25px; text-align:center; font-size:25px; color:#002c23eb;}
+#tudo #conteudo #repete-conteudo #mostra-loteamentos #conteudo-centro {display:flex; flex-wrap:wrap; gap: 15px 1%;}
+#tudo #conteudo #repete-conteudo #mostra-loteamentos #conteudo-centro #bloco-loteamento { width: 49.5%; overflow: hidden; border-radius: 17px; }
+#tudo #conteudo #repete-conteudo #mostra-loteamentos #conteudo-centro #bloco-loteamento a {width:100%; height:330px; display:block; position:relative; overflow:hidden;  transition: all .5s;}
+#tudo #conteudo #repete-conteudo #mostra-loteamentos #conteudo-centro #bloco-loteamento a:hover {width:100%; height:330px; display:block; position:relative; overflow:hidden;  transform: scale(1.02); transition: all .5s;}
+#tudo #conteudo #repete-conteudo #mostra-loteamentos #conteudo-centro #bloco-loteamento a .dados-loteamento { width:100%; display: flex ; align-items: center;  height:100%; position:absolute; bottom:0; background: linear-gradient(to left, rgba(36, 52, 104, 0) 30%, #002c23 100%); background-size: 200%; background-position: right; transition: background-position 0.5s ease; }
+#tudo #conteudo #repete-conteudo #mostra-loteamentos #conteudo-centro #bloco-loteamento a:hover .dados-loteamento { background-position: left; }
+#tudo #conteudo #repete-conteudo #mostra-loteamentos #conteudo-centro #bloco-loteamento a .dados-loteamento .alinha-centro { padding: 0px 20px;transition: all .5s;  height: 100%;  background: linear-gradient(to left, rgba(36, 52, 104, 0) 51%, #002c23 98%); background-size: 200%;  background-position: left;  display: grid ; align-content: center; width: 200px;} 
+#tudo #conteudo #repete-conteudo #mostra-loteamentos #conteudo-centro #bloco-loteamento a:hover .dados-loteamento .alinha-centro { transition: all .5s;  padding: 0px 40px; background-position: right;  }
+#tudo #conteudo #repete-conteudo #mostra-loteamentos #conteudo-centro #bloco-loteamento a .dados-loteamento .nome-loteamento { color: #FFF; font-size:19px; padding-bottom: 10px; font-weight: 600; width: 100%;} 
+#tudo #conteudo #repete-conteudo #mostra-loteamentos #conteudo-centro #bloco-loteamento a .dados-loteamento .dados-exibe {display:table; }
+#tudo #conteudo #repete-conteudo #mostra-loteamentos #conteudo-centro #bloco-loteamento a .dados-loteamento .dados-exibe .lotes-disponiveis {font-size:16px; color:#FFF;}
+#tudo #conteudo #repete-conteudo #mostra-loteamentos #conteudo-centro #bloco-loteamento a .dados-loteamento .dados-exibe .lotes-disponiveis span {border:1px solid #FFF; padding:2px 10px 0px 10px; font-size:16px; color:#FFF; border-radius:5px;}
+#tudo #conteudo #repete-conteudo #mostra-loteamentos #conteudo-centro #bloco-loteamento a .dados-loteamento .dados-exibe .botao-confira {display: table;  margin-top: 10px; font-weight: 600; font-size:16px; padding: 2px 10px 0px 10px; background-color: #13791bc4; color: white; border-radius: 10px; transition: all .3s;} 
+#tudo #conteudo #repete-conteudo #mostra-loteamentos #conteudo-centro #bloco-loteamento a:hover .dados-loteamento .dados-exibe .botao-confira {background-color:#10c21ee3; border-radius:10px; transition: all .3s;}
+
+#tudo #rodape {width:100%; position:relative; z-index:3;}
+#tudo #rodape #repete-copy {width:100%;padding-bottom:15px; padding-top:30px;}
+#tudo #rodape #repete-copy #conteudo-copy {width:1200px; margin:0 auto;}
+#tudo #rodape #repete-copy #conteudo-copy .copy {color:#FFF; font-weight:400; font-size:15px; text-align:center;}
+#tudo #rodape #repete-copy #conteudo-copy .desenvolvido {display:table; margin:0 auto; margin-top:5px;}
+#tudo #rodape #repete-copy #conteudo-copy .desenvolvido span {display:table; float:left; color:#FFF; font-weight:400; padding-top:8px;}
+#tudo #rodape #repete-copy #conteudo-copy .desenvolvido a {display:block; float:left;}
+
+#conteudo-interno {margin:0px 2%; padding:20px; min-height:675px; position:relative;  background-color: rgba(255, 255, 255, 0.651); margin-top:20px; border-radius:15px;}
+#conteudo-interno #bloco-titulo {width: 100%;}
+#conteudo-interno #bloco-titulo .titulo {font-weight:600; padding-bottom:25px; text-align:center; font-size:25px; color:#002c23eb;}
+#conteudo-interno .botao-topo {position:absolute; left:30px; margin-top:5px;}
+#conteudo-interno .botao-topo a {display:block; font-size:15px; color:#002c23; padding-left:20px; transition:.2s linear;}
+#conteudo-interno .botao-topo a:before {content:""; display:inline-block; cursor:pointer; vertical-align:middle; position:absolute; margin-top:0px; margin-left:-20px; width:0; height:0; border-bottom:7px solid transparent; border-top:7px solid transparent; border-right:10px solid #002c23; transition:.2s linear;}
+#conteudo-interno .botao-bottom {display:table; margin:0 auto; margin-top:20px;}
+#conteudo-interno .botao-bottom a {display:block; font-size:15px; color:#002c23; padding-left:20px; transition:.2s linear;}
+#conteudo-interno .botao-bottom a:before {content:""; display:inline-block; cursor:pointer; vertical-align:middle; position:absolute; margin-top:0px; margin-left:-20px; width:0; height:0; border-bottom:7px solid transparent; border-top:7px solid transparent; border-right:10px solid #002c23; transition:.2s linear;}
+
+#erro-maior {display:table; margin:0 auto; margin-bottom:20px;}
+#erro {display:table; max-width:600px; margin:0 auto; margin-top:30px; font-family:Sans-Serif; margin-bottom:25px; background-color:#FF0000; padding:6px 50px; border-radius:5px;}
+#erro .erro {color:#FFF; font-size:16px; font-family:Sans-Serif; text-align:center;}
+#erro .erro strong {color:#FFF; font-size:16px; font-family:Sans-Serif;}
+.botao-carrinho {display:table; margin:0 auto; margin-top:-20px;}
+.botao-carrinho a {display:table; margin:0 auto; font-size:13px; text-align:center; cursor:pointer; color:#FFF; text-transform:uppercase; padding:7px 30px 7px 30px; border:none; padding:7px 30px 7px 30px; background-color:#231F20; border-radius:10px; transition:.3s linear;}
+.botao-carrinho a:hover {background-color:#544d4f; transition:.3s linear;}
+
+#conteudo-interno #conteudo-conta {width:100%; margin-top:20px;}
+#conteudo-interno #conteudo-conta #topo-conta {display:table; padding:10px 15px; margin:0 auto; background-color:#002c23; border-radius:15px;}
+#conteudo-interno #conteudo-conta #topo-conta #col-esq-conta {min-width:800px; float:left;}
+#conteudo-interno #conteudo-conta #topo-conta #col-esq-conta #menu {display:table; float:left; margin-top:20px;}
+#conteudo-interno #conteudo-conta #topo-conta #col-esq-conta #menu p {display:table; float:left; padding-left:20px; padding-right:20px; border-right:1px solid #FFF;}
+#conteudo-interno #conteudo-conta #topo-conta #col-esq-conta #menu p a {display:block; color:#FFF;}
+#conteudo-interno #conteudo-conta #topo-conta #col-esq-conta #menu p a:hover {text-decoration:underline;}
+#conteudo-interno #conteudo-conta #topo-conta #col-esq-conta #menu .ativo a {text-decoration:underline;}
+#conteudo-interno #conteudo-conta #topo-conta #col-dir-conta {display:table; float:right;}
+#conteudo-interno #conteudo-conta #topo-conta #col-dir-conta #bloco-logado {display:table;}
+#conteudo-interno #conteudo-conta #topo-conta #col-dir-conta #bloco-logado .icone {float:right; padding:5px; margin-left:15px; background-color:#FFF; border-radius:100%;}
+#conteudo-interno #conteudo-conta #topo-conta #col-dir-conta #bloco-logado .nome {float:right; color:#FFF; text-align:right; font-weight:600; margin-top:10px; font-size:16px;}
+#conteudo-interno #conteudo-conta #topo-conta #col-dir-conta #bloco-logado .creci {text-align:right; color:#FFF; margin-top:5px; font-size:13px;}
+#conteudo-interno #conteudo-conta #mostra-conta {width:100%;}
+#conteudo-interno #conteudo-conta #mostra-conta #tabela-lotes {width:100%; margin-top:30px;}
+#conteudo-interno #conteudo-conta #mostra-conta #tabela-lotes .tr-titulo {width:100%;}
+#conteudo-interno #conteudo-conta #mostra-conta #tabela-lotes .tr-titulo .esq {padding:5px; background-color:#002c23; border-radius:5px 0px 0px 0px;}
+#conteudo-interno #conteudo-conta #mostra-conta #tabela-lotes .tr-titulo th {padding:5px; color:#FFF; font-weight:600; background-color:#002c23;}
+#conteudo-interno #conteudo-conta #mostra-conta #tabela-lotes .tr-titulo .dir {padding:5px; background-color:#002c23; border-radius:0px 5px 0px 0px;}
+#conteudo-interno #conteudo-conta #mostra-conta #tabela-lotes .tr-lista {width:100%;}
+#conteudo-interno #conteudo-conta #mostra-conta #tabela-lotes .tr-lista td {padding:10px; font-size:15px; text-align:left; color:#002c23; font-weight:400;}
+#conteudo-interno #conteudo-conta #mostra-conta #tabela-lotes .tr-lista td .botao {display:block; cursor:pointer; padding:10px 10px;}
+#conteudo-interno #conteudo-conta #mostra-conta #tabela-lotes .tr-lista td .botao span {color:#002c23;}
+#conteudo-interno #conteudo-conta #mostra-conta #tabela-lotes .tr-lista .restante {background-color:#FFFF00; color:#002c23; cursor:pointer;}
+#conteudo-interno #conteudo-conta #mostra-conta #tabela-lotes .tr-lista .vendido {background-color:#FF0000; color:#FFF; cursor:pointer;}
+#conteudo-interno #conteudo-conta #mostra-conta #tabela-lotes .tr-lista .restante strong {font-size:17px;}
+#conteudo-interno #conteudo-conta #mostra-conta .msg {text-align:center; font-size:15px; color:#002c23; padding-top:50px;}
+#conteudo-interno #conteudo-conta #mostra-conta .fundo-acoes {width:100%; height:100%; top:0; left:0; position:fixed; z-index:51; background:rgba(0,0,0,0.7);}
+#conteudo-interno #conteudo-conta #mostra-conta #popup-acoes {min-width:320px; min-height:155px; background-color:#FFF; padding:15px 20px; position:fixed; z-index:52; left:50%; top:50%; transform:translate(-50%, -50%); border-radius:10px;}
+#conteudo-interno #conteudo-conta #mostra-conta #popup-acoes .fechar {font-size:29px; position:absolute; cursor:pointer; right:10px; top:5px; color:#FF0000; font-weight:300;}
+#conteudo-interno #conteudo-conta #mostra-conta #popup-acoes .titulo-acao {font-size:19px; color:#002c23; text-align:center; font-weight:600;}
+#conteudo-interno #conteudo-conta #mostra-conta #popup-acoes .mensagem {font-size:16px; padding-top:10px; color:#002c23; text-align:center; font-weight:400;}
+#conteudo-interno #conteudo-conta #mostra-conta #popup-acoes .mensagem strong {font-size:16px; color:#002c23; font-weight:600;}
+#conteudo-interno #conteudo-conta #mostra-conta #popup-acoes .messagem-2 {font-size:13px; padding-top:20px; color:#585858; text-align:center;}
+#conteudo-interno #conteudo-conta #mostra-conta #popup-acoes #botoes {display:table; margin:0 auto; padding-top:10px;}
+#conteudo-interno #conteudo-conta #mostra-conta #popup-acoes #botoes .botao-sim {float:left; margin-right:10px;}
+#conteudo-interno #conteudo-conta #mostra-conta #popup-acoes #botoes .botao-sim input {color:#FFF; cursor:pointer; padding:3px 15px; outline:none; background-color:#00b8ff; border:none; border-radius:10px; transition: all .3s;}
+#conteudo-interno #conteudo-conta #mostra-conta #popup-acoes #botoes .botao-sim input:hover {background-color:#44cbff; transition: all .3s;}
+#conteudo-interno #conteudo-conta #mostra-conta #popup-acoes #botoes .botao-contrato {float:left; margin-right:10px;}
+#conteudo-interno #conteudo-conta #mostra-conta #popup-acoes #botoes .botao-contrato input {color:#FFF; cursor:pointer; padding:3px 15px; outline:none; background-color:#421717; border:none; border-radius:10px;}
+#conteudo-interno #conteudo-conta #mostra-conta #popup-acoes #botoes .botao-contrato input:hover {background-color:#462222; transition: all .3s;}
+#conteudo-interno #conteudo-conta #mostra-conta #popup-acoes #botoes .botao-nao {float:left;}
+#conteudo-interno #conteudo-conta #mostra-conta #popup-acoes #botoes .botao-nao input {color:#FFF; cursor:pointer; padding:3px 15px; outline:none; background-color:#FF0000; border:none; border-radius:10px;}
+#conteudo-interno #conteudo-conta #mostra-conta #popup-acoes #botoes .botao-nao input:hover {background-color:#fd4545; transition: all .3s;}
+#conteudo-interno #conteudo-conta #mostra-conta #popup-acoes .icone {display:table; margin:0 auto;}
+#conteudo-interno #conteudo-conta #mostra-conta #popup-acoes .ok {font-size:17px; padding-top:10px; color:#002c23; text-align:center; font-weight:600;}
+#conteudo-interno #conteudo-conta #mostra-conta #popup-acoes .restante {font-size:15px; padding-top:10px; color:#002c23; text-align:center;}
+#conteudo-interno #conteudo-conta #mostra-conta #popup-acoes .msg-final {font-size:13px; color:#565656; text-align:center;}
+#conteudo-interno #conteudo-conta #mostra-conta #popup-acoes .erro {font-size:13px; padding-top:60px; color:#FF0000; text-align:center;}
+#conteudo-interno #conteudo-conta #mostra-conta #editar-dados {display:table; margin:0 auto; margin-top:20px;}
+#conteudo-interno #conteudo-conta #mostra-conta #editar-dados label {color:#002c23; font-weight:600;}
+#conteudo-interno #conteudo-conta #mostra-conta #editar-dados select {width:330px; border:1px solid #ccc; padding:5px 10px; border-radius:5px;}
+#conteudo-interno #conteudo-conta #mostra-conta #editar-dados input[type=text] {width:330px; border:1px solid #ccc; padding:5px 10px; border-radius:5px;}
+#conteudo-interno #conteudo-conta #mostra-conta #editar-dados input[type=email] {width:330px; border:1px solid #ccc; padding:5px 10px; border-radius:5px;}
+#conteudo-interno #conteudo-conta #mostra-conta #editar-dados input[type=password] {width:330px; border:1px solid #ccc; padding:5px 10px; border-radius:5px;}
+#conteudo-interno #conteudo-conta #mostra-conta #editar-dados .campo {display:table; float:left; margin-left:10px; margin-right:10px; margin-bottom:10px;}
+#conteudo-interno #conteudo-conta #mostra-conta #editar-dados .campo-select {position:relative;}
+#conteudo-interno #conteudo-conta #mostra-conta #editar-dados .campo-select:before {content:""; display:inline-block; cursor:pointer; vertical-align:middle; position:absolute; z-index:50; margin-top:36px; right:7px; width:0; height:0; border-right:4px solid transparent; border-left:4px solid transparent; border-top:6px solid #002c23; background-color:#FFF; transition:.2s linear;}
+#conteudo-interno #conteudo-conta #mostra-conta #editar-dados .botao-entrar {display:table; margin:0 auto; margin-top:10px;}
+#conteudo-interno #conteudo-conta #mostra-conta #editar-dados .botao-entrar input[type=submit] {background-color:#002c23; cursor:pointer; color:#FFF; padding:5px 15px; border:none; border-radius:10px; transition: all .3s;}
+#conteudo-interno #conteudo-conta #mostra-conta #editar-dados .botao-entrar input[type=submit]:hover {background-color:#07473a; transition: all .3s;}
+#conteudo-interno #conteudo-conta #mostra-conta #contratos {width:100%;}
+#conteudo-interno #conteudo-conta #mostra-conta #contratos .novo {display:table; margin:0 auto; margin-top:20px; background-color:#ff0000; cursor:pointer; color:#FFF; padding:5px 30px; border:none; border-radius:10px; transition: all .3s;}
+#conteudo-interno #conteudo-conta #mostra-conta #contratos .novo:hover {background-color:#ff4747; transition: all .3s;}
+#conteudo-interno #conteudo-conta #mostra-conta #contratos #bloco-novo {display:table; margin:0 auto; margin-top:25px; padding:10px 20px; border:1px solid #ccc; border-radius:10px;}
+#conteudo-interno #conteudo-conta #mostra-conta #contratos #bloco-novo label {color:#002c23; font-weight:600; display:block;}
+#conteudo-interno #conteudo-conta #mostra-conta #contratos #bloco-novo select {width:330px; border:1px solid #ccc; color:#aaa; padding:5px 10px; border-radius:5px;}
+#conteudo-interno #conteudo-conta #mostra-conta #contratos #bloco-novo .campo {display:table; margin-bottom:10px; position:relative;}
+#conteudo-interno #conteudo-conta #mostra-conta #contratos #bloco-novo .bloco-campo:before { display:inline-block; cursor:pointer; vertical-align:middle; position:absolute; z-index:50; margin-top:36px; right:7px; width:0; height:0; border-right:4px solid transparent; border-left:4px solid transparent; border-top:6px solid #002c23; background-color:#FFF; transition:.2s linear;}
+#conteudo-interno #conteudo-conta #mostra-conta #contratos #bloco-novo .bloco-cadastratar {display:table; margin:0 auto; margin-top:10px;}
+#conteudo-interno #conteudo-conta #mostra-conta #contratos #bloco-novo .bloco-cadastratar input[type=submit] {background-color:#002c23; cursor:pointer; color:#FFF; padding:5px 15px; border:none; border-radius:10px; transition: all .3s;}
+#conteudo-interno #conteudo-conta #mostra-conta #contratos #bloco-novo .bloco-cadastratar input[type=submit]:hover {background-color:#07473a; transition: all .3s;}
+#conteudo-interno #conteudo-conta #mostra-conta #contratos #mostra-contratos {width:100%;}
+#conteudo-interno #conteudo-conta #mostra-conta #contratos #mostra-contratos .msg {text-align:center; font-size:15px; color:#002c23; padding-top:50px;}
+#conteudo-interno #conteudo-conta #mostra-conta .erro-lista {display:table; padding:5px 10px; color:#FFF; text-align:center; text-align:center; background-color:#FF0000; margin:0 auto; margin-bottom:10px; border-radius:5px;}
+#conteudo-interno #conteudo-conta #mostra-conta .erro-lista strong {color:#FFF;}
+#conteudo-interno #conteudo-conta #mostra-conta .erro-sucesso {display:table; padding:5px 10px; color:#FFF; text-align:center; text-align:center; background-color:green; margin:0 auto; margin-bottom:10px; border-radius:5px;}
+#conteudo-interno #conteudo-conta #mostra-conta .erro-sucesso strong {color:#FFF;}
+#conteudo-interno #conteudo-conta #mostra-conta #cadastra-anexo {width:100%;}
+#conteudo-interno #conteudo-conta #mostra-conta #cadastra-anexo .titulo {font-size:17px; color:#002c23; margin-top:30px; text-align:center;}
+#conteudo-interno #conteudo-conta #mostra-conta #cadastra-anexo .titulo strong {font-size:17px; color:#002c23;}
+#conteudo-interno #conteudo-conta #mostra-conta #cadastra-anexo #bloco-anexo {display:table; margin:0 auto; margin-top:20px;}
+#conteudo-interno #conteudo-conta #mostra-conta #cadastra-anexo #bloco-anexo .label {font-size:15px; text-align:center; padding-bottom:10px; display:block; color:#002c23;}
+#conteudo-interno #conteudo-conta #mostra-conta #cadastra-anexo #bloco-anexo .label strong {font-size:15px; font-weight:600; color:#002c23;}
+#conteudo-interno #conteudo-conta #mostra-conta #cadastra-anexo #bloco-anexo .selecao {padding:5px 10px; margin-top:20px; padding-top:10px; padding-bottom:10px; border:1px solid #ccc; position:relative; border-radius:5px;}
+#conteudo-interno #conteudo-conta #mostra-conta #cadastra-anexo #bloco-anexo .selecao .obgr {color:#FF0000; font-size:13px; position:absolute; font-weight:600; left:10px; top:-10px; background-color:#FFF; padding:0px 5px;}
+#conteudo-interno #conteudo-conta #mostra-conta #cadastra-anexo #bloco-anexo .selecao .nobgr {color:green; font-size:13px; position:absolute; font-weight:600; left:10px; top:-10px; background-color:#FFF; padding:0px 5px;}
+#conteudo-interno #conteudo-conta #mostra-conta #cadastra-anexo #bloco-anexo .selecao .titulo-selecao {width:350px; float:left; color:#002c23; font-size:15px; font-weight:bold;}
+#conteudo-interno #conteudo-conta #mostra-conta #cadastra-anexo #bloco-anexo .selecao .campo {float:left; cursor:pointer;}
+#conteudo-interno #conteudo-conta #mostra-conta #cadastra-anexo #bloco-anexo .botao-salvar {display:table; margin:0 auto; color:#FFF; padding:5px 25px; border:none; margin-top:20px; cursor:pointer; background-color:#FF0000; border-radius:10px;}
+#conteudo-interno #conteudo-conta #mostra-conta #cadastra-anexo #bloco-anexo .botao-salvar:hover {background-color:#f75656; border-radius:10px; transition: all .3s;}
+#conteudo-interno #conteudo-conta #mostra-conta #cadastra-anexo #bloco-anexo .custom-file-label {display:table; margin:0 auto; cursor:pointer; margin-top:10px; padding:3px 20px; color:#FFF; background-color:#ff0000; border-radius:10px;}
+#conteudo-interno #conteudo-conta #mostra-conta #cadastra-anexo #bloco-anexo .custom-file-label:hover {background-color:#fb4040; border-radius:10px;}
+#conteudo-interno #conteudo-conta #mostra-conta #cadastra-anexo #mostra-anexos {width:100%; margin-top:30px;}
+#conteudo-interno #conteudo-conta #mostra-conta #cadastra-anexo #mostra-anexos .botao {display:table; margin:0 auto; padding:8px;}
+#conteudo-interno #conteudo-conta #mostra-conta #cadastra-anexo #mostra-anexos .botao a {display:block; color:#FFF; font-size:13px; padding:2px 20px; background-color:#ff0000; border-radius:10px;}
+#conteudo-interno #conteudo-conta #mostra-conta #cadastra-anexo #mostra-anexos .botao a:hover {background-color:#fb5e5e; border-radius:10px;}
+
+#conteudo-interno #conteudo-login {width:100%; margin-top:20px;}
+#conteudo-interno #conteudo-login #mostra-login {display:table; margin:0 auto; border:1px solid #ccc; padding:30px; padding-bottom:20px; border-radius:15px;}
+#conteudo-interno #conteudo-login #mostra-login .campo-email {display:table; margin-bottom:20px;}
+#conteudo-interno #conteudo-login #mostra-login .campo-email input {width:350px; padding:6px 10px; font-size:17px; outline:none; border:1px solid #ccc; border-radius:5px;}
+#conteudo-interno #conteudo-login #mostra-login .campo-senha {display:table; margin-bottom:15px;}
+#conteudo-interno #conteudo-login #mostra-login .campo-senha input {width:350px; padding:6px 10px; font-size:17px; outline:none; border:1px solid #ccc; border-radius:5px;}
+#conteudo-interno #conteudo-login #mostra-login .botao-entrar {display:table; margin:0 auto;}
+#conteudo-interno #conteudo-login #mostra-login .botao-entrar input {color:#FFF; padding:5px 30px; cursor:pointer; border:none; background-color:#002c23; border-radius:10px; transition: all .3s;}
+#conteudo-interno #conteudo-login #mostra-login .botao-entrar input:hover {background-color:#07473a; border-radius:10px; transition: all .3s;}
+#conteudo-interno #conteudo-login #mostra-login .esqueci-minha-senha {display:table; margin:0 auto; padding-top:20px;}
+#conteudo-interno #conteudo-login #mostra-login .esqueci-minha-senha a {color:#666; text-decoration:underline;}
+
+#conteudo-interno #conteudo-esqueci-minha-senha {width:100%; margin-top:30px;}
+#conteudo-interno #conteudo-esqueci-minha-senha .titulo-area {font-size:16px; color:#002c23; text-align:center;}
+#conteudo-interno #conteudo-esqueci-minha-senha #alinha {display:table; margin:0 auto; margin-top:40px;}
+#conteudo-interno #conteudo-esqueci-minha-senha #alinha #form {display:table;}
+#conteudo-interno #conteudo-esqueci-minha-senha #alinha #form .label {font-size:17px; color:#474747;}
+#conteudo-interno #conteudo-esqueci-minha-senha #alinha #form .campo-padrao {display:table; margin-bottom:20px;}
+#conteudo-interno #conteudo-esqueci-minha-senha #alinha #form .campo-padrao input {width:400px; height:35px; padding-left:10px; padding-right:10px; border-radius:5px; border:1px solid #ccc;}
+#conteudo-interno #conteudo-esqueci-minha-senha #alinha #form .campo-enviar {display:table; margin:0 auto;}
+#conteudo-interno #conteudo-esqueci-minha-senha #alinha #form .campo-enviar .botao {display:table; margin-left:15px; font-size:15px; text-align:center; cursor:pointer; color:#FFF; padding:4px 25px 4px 25px; background-color:#002c23; border:none; transition:.3s linear;}
+#conteudo-interno #conteudo-esqueci-minha-senha #alinha #form .campo-enviar .botao:hover {background:#07473a; background-size:17px; transition:.3s linear;}
+
+
+#conteudo-interno #conteudo-loteamentos {display:flex; flex-wrap:wrap; gap: 15px 1%;}
+#conteudo-interno #conteudo-loteamentos #bloco-loteamento { width: 49.5%; overflow: hidden; border-radius: 17px; }
+#conteudo-interno #conteudo-loteamentos #bloco-loteamento a {width:100%; height:330px; display:block; position:relative; overflow:hidden;  transition: all .5s;}
+#conteudo-interno #conteudo-loteamentos #bloco-loteamento a:hover {width:100%; height:330px; display:block; position:relative; overflow:hidden;  transform: scale(1.02); transition: all .5s;}
+#conteudo-interno #conteudo-loteamentos #bloco-loteamento a .dados-loteamento { width:100%; display: flex ; align-items: center;  height:100%; position:absolute; bottom:0; background: linear-gradient(to left, rgba(36, 52, 104, 0) 30%, #002c23 100%); background-size: 200%; background-position: right; transition: background-position 0.5s ease; }
+#conteudo-interno #conteudo-loteamentos #bloco-loteamento a:hover .dados-loteamento { background-position: left; }
+#conteudo-interno #conteudo-loteamentos #bloco-loteamento a .dados-loteamento .alinha-centro { padding: 0px 20px;transition: all .5s;  height: 100%;  background: linear-gradient(to left, rgba(36, 52, 104, 0) 51%, #002c23 98%); background-size: 200%;  background-position: left;  display: grid ; align-content: center; width: 200px;} 
+#conteudo-interno #conteudo-loteamentos #bloco-loteamento a:hover .dados-loteamento .alinha-centro { transition: all .5s;  padding: 0px 40px; background-position: right;  }
+#conteudo-interno #conteudo-loteamentos #bloco-loteamento a .dados-loteamento .nome-loteamento { color: #FFF; font-size:19px; padding-bottom: 10px; font-weight: 600; width: 100%;} 
+#conteudo-interno #conteudo-loteamentos #bloco-loteamento a .dados-loteamento .dados-exibe {display:table; }
+#conteudo-interno #conteudo-loteamentos #bloco-loteamento a .dados-loteamento .dados-exibe .lotes-disponiveis {font-size:16px; color:#FFF;}
+#conteudo-interno #conteudo-loteamentos #bloco-loteamento a .dados-loteamento .dados-exibe .lotes-disponiveis span {border:1px solid #FFF; padding:2px 10px 0px 10px; font-size:16px; color:#FFF; border-radius:5px;}
+#conteudo-interno #conteudo-loteamentos #bloco-loteamento a .dados-loteamento .dados-exibe .botao-confira {display: table;  margin-top: 10px; font-weight: 600; font-size:16px; padding: 2px 10px 0px 10px; background-color: #13791bc4; color: white; border-radius: 10px; transition: all .3s;} 
+#conteudo-interno #conteudo-loteamentos #bloco-loteamento a:hover .dados-loteamento .dados-exibe .botao-confira {background-color:#10c21ee3; border-radius:10px; transition: all .3s;}
+
+
+#conteudo-interno #conteudo-loteamentos-detalhes {width:100%;}
+#conteudo-interno #conteudo-loteamentos-detalhes .msg-reservar {background-color:#FF0000; text-align:center; margin-bottom:15px; color:#FFF; padding:5px; border-radius:5px;}
+#conteudo-interno #conteudo-loteamentos-detalhes .titulo {max-width:1200px; display:table; font-weight:600; margin:0 auto; background-color:#002c23; margin-top:10px; color:#FFF; text-align:center; font-size:19px; padding:5px 40px; border-radius:10px;}
+#conteudo-interno #conteudo-loteamentos-detalhes .cidade {font-weight:400; margin-top:15px; text-align:center; color:#002c23; font-size:16px;}
+#conteudo-interno #conteudo-loteamentos-detalhes .comissao {background:#91b16c; margin-top:20px; color:#FFF; padding:10px 15px; border-radius:5px;}
+#conteudo-interno #conteudo-loteamentos-detalhes .comissao strong {color:#FFF; font-weight:600;}
+#conteudo-interno #conteudo-loteamentos-detalhes .descricao {margin: auto; margin-top:30px; color:#002c23; font-size:16px; font-size:16px;}
+#conteudo-interno #conteudo-loteamentos-detalhes .descricao p {color:#002c23; font-size:16px;}
+#conteudo-interno #conteudo-loteamentos-detalhes .descricao div {color:#002c23; font-size:16px;}
+#conteudo-interno #conteudo-loteamentos-detalhes .descricao strong {color:#002c23; font-size:16px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-loteamentos {width:100%; margin-top:30px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-loteamentos .owl-nav {position:relative;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-loteamentos .owl-nav .owl-prev {width:40px; height:40px; position:absolute; left:20px; top:50%; margin-top:-160px; color:#FFF; outline:none; font-size:0.001px; background:transparent url('../i/quebrado/seta.svg') center center no-repeat; background-size:auto 40px; transform:rotate(180deg); opacity:0.5; transition: all .3s;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-loteamentos .owl-nav .owl-prev:hover {opacity:1; transition: all .3s;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-loteamentos .owl-nav .owl-prev span {color:#FFF; font-size:0.001px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-loteamentos .owl-nav .owl-next {width:40px; height:40px; position:absolute; right:20px; top:50%; margin-top:-160px; color:#FFF; outline:none; font-size:0.001px; background:transparent url('../i/quebrado/seta.svg') center center no-repeat; background-size:auto 40px; opacity:0.5; transition: all .3s;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-loteamentos .owl-nav .owl-next:hover {opacity:1; transition: all .3s;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-loteamentos .owl-nav .owl-next span {color:#FFF; font-size:0.001px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos {width:100%; margin-top:30px; overflow:hidden;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos {width:100%; display:flex; gap:1%;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item { display: flex; align-items: center; flex:1; border:1px solid #ccc; padding:7px 15px; cursor:pointer; border-radius:5px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item:hover {background-color:#002c23;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item .titulo-anexo {display:table; margin:0 auto; color:#002c23; padding: 5px 0px;  padding-left:35px; font-size:17px; font-weight:600; border-radius:10px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item:hover .titulo-anexo {color:#FFF; font-weight:300;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item .M {background:transparent url('../i/quebrado/matriculas.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item:hover .M {background:transparent url('../i/quebrado/matriculas-branco.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item .FL {background:transparent url('../i/quebrado/galeria-de-imagens.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item:hover .FL {background:transparent url('../i/quebrado/galeria-de-imagens-branco.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item .FM {background:transparent url('../i/quebrado/megafone.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item:hover .FM {background:transparent url('../i/quebrado/megafone-branco.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item .V {background:transparent url('../i/quebrado/botao-play.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item:hover .V {background:transparent url('../i/quebrado/botao-play-branco.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item .P {background:transparent url('../i/quebrado/projeto.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item:hover .P {background:transparent url('../i/quebrado/projeto-branco.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item .O {background:transparent url('../i/quebrado/obras.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item:hover .O {background:transparent url('../i/quebrado/obras-branco.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item .PL {background:transparent url('../i/quebrado/planta.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item:hover .PL {background:transparent url('../i/quebrado/planta-branco.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item .mapa {background:transparent url('../i/quebrado/mapa-azul.png') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item:hover .mapa {background:transparent url('../i/quebrado/mapa-branco.png') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item .drive {background:transparent url('../i/quebrado/google-drive-azul.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item:hover .drive {background:transparent url('../i/quebrado/google-drive.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item-ativo {border:1px solid #ccc; flex:1; background-color:#002c23; padding:7px 15px; cursor:pointer; border-radius:5px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item-ativo .titulo-anexo {display:table; margin:0 auto; color:#FFF; font-weight:300; padding-left:35px; font-size:17px; border-radius:10px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item-ativo .M {background:transparent url('../i/quebrado/matriculas-branco.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item-ativo .FL {background:transparent url('../i/quebrado/galeria-de-imagens-branco.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item-ativo .FM {background:transparent url('../i/quebrado/megafone-branco.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item-ativo .V {background:transparent url('../i/quebrado/botao-play-branco.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item-ativo .P {background:transparent url('../i/quebrado/projeto-branco.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item-ativo .O {background:transparent url('../i/quebrado/obras-branco.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item-ativo .PL {background:transparent url('../i/quebrado/planta-branco.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item-ativo .mapa {background:transparent url('../i/quebrado/mapa-branco.png') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos #exibe-titulos .bloco-item-ativo .drive {background:transparent url('../i/quebrado/google-drive.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos .mostra-anexos {padding:15px; margin-top:20px; border:1px solid #ccc;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos .mostra-anexos #tabela-anexo {width:100%; border-collapse:collapse;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos .mostra-anexos #tabela-anexo .titulos-anexos {width:100%; background-color:#002c23;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos .mostra-anexos #tabela-anexo .titulos-anexos th {color:#FFF; padding:5px 0px; border-left:1px solid #FFF; font-weight:500;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos .mostra-anexos #tabela-anexo .visualizao-anexos {border-bottom:1px solid #ccc;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos .mostra-anexos #tabela-anexo .visualizao-anexos td {padding:5px 10px; color:#424242; border:1px solid #ccc;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos .mostra-anexos #tabela-anexo .visualizao-anexos .nome {width:60%; font-weight:300;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos .mostra-anexos #tabela-anexo .visualizao-anexos .visualizar {width:20%; text-align:center; font-weight:300; text-decoration:underline;}
+#conteudo-interno #conteudo-loteamentos-detalhes #anexos-loteamentos .mostra-anexos #tabela-anexo .visualizao-anexos .download {width:20%; text-align:center; font-weight:300; text-decoration:underline;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes {border:1px solid #ccc; margin-top:30px; padding:20px; border-radius:10px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes .titulo-lotes {font-size:21px; font-weight:600; color:#002c23; text-align:center;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #bloco-filtro {width:100%; margin-top:15px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #bloco-filtro .bloco-campo {display:table; float:left; margin-right:10px; position:relative;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #bloco-filtro .bloco-campo label {font-size:16px; font-weight:600; color:#002c23;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #bloco-filtro .bloco-campo:before {content:""; display:inline-block; cursor:pointer; vertical-align:middle; position:absolute; z-index:50; margin-top:33px; right:7px; width:0; height:0; border-right:4px solid transparent; border-left:4px solid transparent; border-top:6px solid #002c23; background-color:#FFF; transition:.2s linear;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #bloco-filtro .bloco-campo select {width:260px; height:33px; cursor:pointer; outline:none; padding:5px 10px; color:#858585;  position:relative; z-index:31; border:1px solid #858585; border-radius:5px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #bloco-filtro .botao-filtrar {display:table; float:left; margin-top:15px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #bloco-filtro .botao-filtrar input {display:block; border:none; color:#FFF; cursor:pointer; padding:10px 20px; padding-left:40px; background:#002c23 url('../i/quebrado/busca.svg') 17px center no-repeat; background-size:17px; border-radius:10px; transition: all .3s;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #bloco-filtro .botao-filtrar input:hover {background:#07473a url('../i/quebrado/busca.svg') 17px center no-repeat; background-size:17px; border-radius:10px; transition: all .3s;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #bloco-filtro .icone-imprimir {display:table; cursor:pointer; float:right; margin-top:20px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #lista-lotes {width:100%; margin-top:20px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #lista-lotes #tabela-lotes {width:100%;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #lista-lotes #tabela-lotes .tr-titulo {width:100%;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #lista-lotes #tabela-lotes .tr-titulo .esq {padding:5px; background-color:#002c23; border-radius:5px 0px 0px 0px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #lista-lotes #tabela-lotes .tr-titulo th {padding:5px; color:#FFF; font-weight:600; background-color:#002c23;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #lista-lotes #tabela-lotes .tr-titulo .dir {padding:5px; background-color:#002c23; border-radius:0px 5px 0px 0px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #lista-lotes #tabela-lotes .tr-lista {width:100%;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #lista-lotes #tabela-lotes .tr-lista td {padding:5px 10px; font-size:15px; line-height:18px; text-align:center; color:#002c23; font-weight:400;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #lista-lotes #tabela-lotes .tr-lista td strong {color:#002c23; font-size:15px; font-weight:600;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #lista-lotes #tabela-lotes .tr-lista td span {color:#002c23; cursor:pointer; font-size:12px; text-decoration:underline;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #lista-lotes #tabela-lotes .tr-lista td .botao {display:block; cursor:pointer; padding:23px 10px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #lista-lotes #tabela-lotes .tr-lista td .botao span {color:#002c23;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #lista-lotes .mensagem-erro {text-align:center; color:#565656; padding-top:20px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #lista-lotes .mensagem-erro strong {text-align:center; color:#002c23; font-size:13px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes .fundo-acoes {width:100%; height:100%; top:0; left:0; position:fixed; z-index:51; background:rgba(0,0,0,0.7);}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-acoes {min-width:320px; min-height:155px; background-color:#FFF; padding:15px 20px; position:fixed; z-index:52; left:50%; top:50%; transform:translate(-50%, -50%); border-radius:10px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-acoes .fechar {font-size:29px; position:absolute; cursor:pointer; right:10px; top:5px; color:#FF0000; font-weight:300;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-acoes .titulo-acao {font-size:19px; color:#002c23; text-align:center; font-weight:600;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-acoes .mensagem {font-size:16px; padding-top:10px; color:#002c23; text-align:center; font-weight:400;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-acoes .mensagem strong {font-size:16px; color:#002c23; font-weight:600;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-acoes .messagem-2 {font-size:13px; padding-top:20px; color:#585858; text-align:center;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-acoes #botoes {display:table; margin:0 auto; padding-top:10px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-acoes #botoes .botao-sim {float:left; margin-right:10px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-acoes #botoes .botao-sim input {color:#FFF; cursor:pointer; padding:3px 15px; outline:none; background-color:#00b8ff; border:none; border-radius:10px; transition: all .3s;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-acoes #botoes .botao-sim input:hover {background-color:#44cbff; transition: all .3s;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-acoes #botoes .botao-contrato {float:left; margin-right:10px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-acoes #botoes .botao-contrato input {color:#FFF; cursor:pointer; padding:3px 15px; outline:none; background-color:#421717; border:none; border-radius:10px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-acoes #botoes .botao-contrato input:hover {background-color:#462222; transition: all .3s;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-acoes #botoes .botao-nao {float:left;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-acoes #botoes .botao-nao input {color:#FFF; cursor:pointer; padding:3px 15px; outline:none; background-color:#FF0000; border:none; border-radius:10px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-acoes #botoes .botao-nao input:hover {background-color:#fd4545; transition: all .3s;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-acoes .icone {display:table; margin:0 auto;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-acoes .ok {font-size:17px; padding-top:10px; color:#002c23; text-align:center; font-weight:600;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-acoes .restante {font-size:15px; padding-top:10px; color:#002c23; text-align:center;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-acoes .msg-final {font-size:13px; color:#565656; text-align:center;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-acoes .erro {font-size:13px; padding-top:60px; color:#FF0000; text-align:center;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes .fundo-fotos {width:100%; height:100%; top:0; left:0; position:fixed; z-index:51; background:rgba(0,0,0,0.7);}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-fotos {width:85%; background-color:#FFF; position:fixed; z-index:52; left:50%; top:50%; transform:translate(-50%, -50%); border-radius:10px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-fotos #alinha-fotos {padding:40px; position:relative;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-fotos #alinha-fotos .fechar {position:absolute; cursor:pointer; right:40px; font-size:31px; font-weight:bold; color:#FF0000;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-fotos #alinha-fotos .titulo-lote {color:#002c23; text-align:center; font-size:27px; font-weight:700;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-fotos #alinha-fotos .titulo-loteamento {color:#002c23; text-align:center; font-size:19px; font-weight:500;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-fotos #alinha-fotos .titulo-cidade {color:#002c23; text-align:center; font-size:16px; font-weight:400;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-fotos #alinha-fotos .owl-nav {position:relative;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-fotos #alinha-fotos .owl-nav .owl-prev {width:40px; height:40px; position:absolute; left:20px; top:50%; margin-top:-210px; color:#FFF; outline:none; font-size:0.001px; background:transparent url('../i/quebrado/seta.svg') center center no-repeat; background-size:auto 40px; transform:rotate(180deg); opacity:0.5; transition: all .3s;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-fotos #alinha-fotos .owl-nav .owl-prev:hover {opacity:1; transition: all .3s;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-fotos #alinha-fotos .owl-nav .owl-prev span {color:#FFF; font-size:0.001px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-fotos #alinha-fotos .owl-nav .owl-next {width:40px; height:40px; position:absolute; right:20px; top:50%; margin-top:-210px; color:#FFF; outline:none; font-size:0.001px; background:transparent url('../i/quebrado/seta.svg') center center no-repeat; background-size:auto 40px; opacity:0.5; transition: all .3s;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-fotos #alinha-fotos .owl-nav .owl-next:hover {opacity:1; transition: all .3s;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-fotos #alinha-fotos .owl-nav .owl-next span {color:#FFF; font-size:0.001px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes .fundo-mapa {width:100%; height:100%; top:0; left:0; position:fixed; z-index:51; background:rgba(0,0,0,0.7);}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-mapa {width:85%; height:85%; background-color:#FFF; position:fixed; z-index:52; left:50%; top:50%; transform:translate(-50%, -50%); border-radius:10px;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-mapa .fechar {position:absolute; cursor:pointer; right:-40px; top:-40px; font-size:31px; font-weight:bold; color:#FFF;}
+#conteudo-interno #conteudo-loteamentos-detalhes #mostra-lotes #popup-mapa iframe {border-radius:10px;}
+
+#conteudo-interno #conteudo-informativos {width:100%; margin-top:20px;}
+#conteudo-interno #conteudo-informativos #bloco-informativo {padding:20px 25px; margin-bottom:20px; background: white; box-shadow:0px 0px 10px -3px #000; border-radius:15px;}
+#conteudo-interno #conteudo-informativos #bloco-informativo .nome-informativo {font-size:21px; font-weight:600; color:#002c23; margin-bottom:15px;}
+#conteudo-interno #conteudo-informativos #bloco-informativo .descricao-informativo p {font-size:15px; color:#666;}
+#conteudo-interno #conteudo-informativos #bloco-informativo .descricao-informativo div {font-size:15px; color:#666;}
+#conteudo-interno #conteudo-informativos #bloco-informativo .descricao-informativo strong {font-size:15px; font-weight:600; color:#002c23;}
+#conteudo-interno #conteudo-informativos #bloco-informativo .descricao-informativo span {font-size:15px; color:#666;}
+#conteudo-interno #conteudo-informativos #bloco-informativo .descricao-informativo li {font-size:15px; color:#666;}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.swal2-title {font-size:21px;}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size:29px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}	
+
+
+/* Largura da barra de rolagem */
+::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+
+/* Fundo da barra de rolagem */
+::-webkit-scrollbar-track-piece {
+    background-color: #FFF;
+}
+
+/* Cor do indicador de rolagem */
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal {
+    background-color: #002c23
+}
+
+/* Cor do indicador de rolagem - ao passar o mouse */
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:horizontal:hover {
+    background-color: #07473a
+}
+
+#paginacao {display:block; text-align:center; margin-top:10px;}
+#paginacao p{font-size:13px;}
+#paginacao strong{font-size:13px; color:#000;}
+#paginacao ul {height:30px; margin:10px auto 0; text-align:center;}
+#paginacao ul li {display:inline;}
+#paginacao ul li a {margin-right:5px; font-size:13px; background-color:#000; padding:2px 15px; border-radius:5px; transition:0.2s linear;}
+#paginacao ul li a:hover {background-color:#444; transition:0.2s linear;}
+#paginacao a:link {color:#FFF;}
+#paginacao a:visited {color:#FFF;}
+#paginacao a:hover {color:#FFF;}
+#paginacao a:active {color:#FFF;}
+#paginacao span.branco  {margin-right:5px; font-size:13px; background-color:#fff; border:1px solid #313237; padding:2px 15px; border-radius:5px;}
